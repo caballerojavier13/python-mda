@@ -1,0 +1,29 @@
+
+#bs-navbar-collapse{
+	display: none !important;
+}
+.navbar-header button{
+	display: none !important;	
+}
+
+.container{
+	position: relative;
+	width: 90% !important;
+	background: white;
+	padding: 10px !important;
+	border-radius: 5px;
+}
+
+.page-header h1{
+	font-size: 48px !important;
+	margin-top: -20px;
+}
+
+#new_persona{
+	float: right;
+	margin-bottom: 20px;
+}
+
+table{
+	background-color: white;
+}

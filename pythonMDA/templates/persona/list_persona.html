@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}Proyecto Django MDA - Personas{% endblock title %}
+
+{% block cssprivate %}
+<link href="/media/css/persona/index.css" rel="stylesheet">
+{% endblock cssprivate %}
+
+{% block jsprivate %}
+<script src="/media/js/persona/index.js"></script>
+<script src="/media/js/functions_table.js"></script>
+{% endblock jsprivate %}
+
+{% block content %}
+<div class="container" style="display: none;">
+	<div class="page-header">
+	  <h1>Listado de Personas</h1>
+	</div>
+	<ol class="breadcrumb">
+		<li><a href="/">Home</a></li>
+		<li class="active">Personas</li>
+	</ol>
+	<a href="/persona/new" type="button" id="new_persona" class="btn btn-success "><span class="glyphicon glyphicon-plus">  </span> Nueva Persona</a>
+	<div class="table-responsive">
+		<table class="table table-bordered table-hover">
+	      <thead>
+	        <tr class="active">
+	          <th></th>
+	          <th>Nombre</th>
+	          <th>Apellido</th>
+	          <th>Edad</th>
+	          <th>Operaciones</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	        <tr>
+	          <td>1</td>
+	          <td>Mark</td>
+	          <td>Otto</td>
+	          <td>22</td>
+	          <td>
+	          		<div class="btn-group">
+					  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+					    Relaciones <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" role="menu">
+					    <li><a href="#" class="direccion">Ver Direccion</a></li>
+					  </ul>
+					</div>
+	          		<a href="/persona/edit" type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Editar"><span class="glyphicon glyphicon-pencil"></span></a>
+	          		<a href="/persona/delete" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar"><span class="glyphicon glyphicon-trash"></span></a>
+	          </td>
+	        </tr>
+	        <tr>
+	          <td>2</td>
+	          <td>Jacob</td>
+	          <td>Thornton</td>
+	          <td>55</td>
+	          <td>
+	          		<div class="btn-group">
+					  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+					    Relaciones <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" role="menu">
+					    <li><a href="#" class="direccion">Ver Direccion</a></li>
+					  </ul>
+					</div>
+	          		<a href="/persona/edit" type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Editar"><span class="glyphicon glyphicon-pencil"></span></a>
+	          		<a href="/persona/delete" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar"><span class="glyphicon glyphicon-trash"></span></a>
+	          </td>
+	        </tr>
+	        <tr>
+	          <td>3</td>
+	          <td>Larry</td>
+	          <td>the Bird</td>
+	          <td>15</td>
+	          <td>
+	          		<div class="btn-group">
+					  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+					    Relaciones <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" role="menu">
+					    <li><a href="#" class="direccion">Ver Direccion</a></li>
+					  </ul>
+					</div>
+	          		<a href="/persona/edit" type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Editar"><span class="glyphicon glyphicon-pencil"></span></a>
+	          		<a href="/persona/delete" type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar"><span class="glyphicon glyphicon-trash"></span></a>
+	          </td>
+	        </tr>
+	      </tbody>
+	    </table>
+	</div>
+</div>
+{% endblock content %}
+
+{% block modals %}
+{% include "persona/_modal_direccion.html" %}
+{% endblock modals%}s

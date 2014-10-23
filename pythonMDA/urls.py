@@ -6,10 +6,9 @@ import settings
 
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'mysite.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+    
     url(r'^', include('pythonMDA.apps.home.urls')),
+    url(r'^persona/', include('pythonMDA.apps.persona.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^media/(?P<path>.*)$','django.views.static.serve',{'document_root': settings.MEDIA_ROOT}),

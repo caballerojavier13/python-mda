@@ -1,88 +1,59 @@
-<!DOCTYPE html>
-<html lang="es">
-	<head>
-		<meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <title>Proyecto Django MDA</title>
-	    
-    	<link href="/media/css/metro-bootstrap.min.css" rel="stylesheet">
-    	<link href="/media/css/iconFont.min.css" rel="stylesheet">
+{% extends "base.html" %}
 
-    	<link href="/media/css/home/index.css" rel="stylesheet">
-    	<link href="/media/css/loading_page.css" rel="stylesheet">
+{% block title %}Proyecto Django MDA{% endblock title %}
 
-    	<script src="/media/js/jquery/jquery.min.js"></script>
-	    <script src="/media/js/jquery.widget.min.js"></script>
-	    
-		<script src="/media/js/metro.min.js"></script>
-		<script src="/media/js/home/index.js"></script>
-	</head>
-	<body class="metro">
-		<header style="display: none;">
-		    <nav class="navigation-bar dark">
-			    <nav class="navigation-bar-content">
-			    	<a class="element bold" >Proyecto Python MDA</a>
-			    	<span class="element-divider"></span>
-				    <div class="element place-right">
-					    <a class="dropdown-toggle bold" href="#">Módulos</a>
-					    <ul class="dropdown-menu place-right inverse" data-role="dropdown">
-						    <li><a href="#">ABM Persona</a></li>
-						    <li class="divider"></li>
-						    <li><a href="#">ABM Auto</a></li>
-					    </ul>
-				    </div>
-				    <span class="element-divider place-right"></span>
-				</nav>
-		    </nav>
-		</header>
-		<div class="loading_wrap">
-		  <div class="	bg">
-		    <div class="loading">
-		      <span class="loading_title">Cargando</span>
-		      <span class="loading_text">Proyecto MDA</span>
-		    </div>
-		  </div>
-		</div>
-	    <div class="container" style="display: none;">
-	    	<div class="jumbotron large bg-cyan">
-	        	<h1>Proyecto MDA - 2014</h1>
-	        	<h2 class="lead bold">Proyecto promoción para la cátedra Dearrollo de software Dirigido por Modelos con Python - Django en el Back-End y Metro-UI en el Front-End.</h2>
-	      	</div>
-	      	<div class="grid span12">
-    	    	<div class="row"><h3>Integrantes</h3></div>
-			    <div class="row listview">
-			    	<div class="span4 offset1">
-			    		<a href="#" class="list">
-						<div class="list-content"> Romina Echevarieta</div>
-					</a>
-					<a href="#" class="list">
-						<div class="list-content"> Yanina Morales</div>
-					</a>
-					<a href="#" class="list">
-						<div class="list-content"> Franco Canizo</div>
-					</a>
-				</div>
-				<div class="span4 offset2">
-					<a href="#" class="list">
-						<div class="list-content"> Michael Manganiello</div>
-					</a>
-					<a href="#" class="list">
-						<div class="list-content"> Javier Caballero</div>
-					</a>
-					<a href="#" class="list">
-						<div class="list-content"> Walter</div>
-					</a>
-				</div>
-			    </div>
-		    </div>
-	    </div> <!-- /container -->
 
-	    <footer style="display: none;">
-	        <div class="footer">
-	        	<p>&copy; Desarrollo de Software Dirigido por Modelos 2014</p>
-	    	</div>
-	    </footer>
-	    
-	</body>
-</html>
+{% block cssprivate %}
+<link href="/media/css/home/index.css" rel="stylesheet">
+{% endblock cssprivate %}
+
+{% block jsprivate %}
+<script src="/media/js/home/index.js"></script>
+{% endblock jsprivate %}
+
+
+{% block listmodulos %}
+<li><a href="/persona">Módulo Persona</a></li>
+{% endblock listmodulos %}
+
+{% block content %}
+<div class="container" style="display: none;">
+	<div class="jumbotron large">
+    	<h1>Proyecto MDA - 2014</h1>
+    	<h2 class="lead bold">Proyecto promoción para la cátedra Dearrollo de software Dirigido por Modelos con Python - Django en el Back-End y Bootstrap en el Front-End.</h2>
+  	</div>
+  	<div class="grid">
+    	<div class="row"><h3>Integrantes</h3></div>
+	    <div class="listview row">
+	    	<div class="col-md-3 col-md-offset-2">
+	    		<a href="#" class="list">
+					<div class="list-content"> Romina Echevarieta</div>
+				</a>
+				<a href="#" class="list">
+					<div class="list-content"> Yanina Morales</div>
+				</a>
+				<a href="#" class="list">
+					<div class="list-content"> Franco Canizo</div>
+				</a>
+			</div>
+			<div class="col-md-3 col-md-offset-2">
+				<a href="#" class="list">
+					<div class="list-content"> Michael Manganiello</div>
+				</a>
+				<a href="#" class="list">
+					<div class="list-content"> Javier Caballero</div>
+				</a>
+				<a href="#" class="list">
+					<div class="list-content"> Walter</div>
+				</a>
+			</div>
+	    </div>
+    </div>
+</div> <!-- /container -->
+
+<footer style="display: none;">
+    <div class="footer">
+    	<p>&copy; Desarrollo de Software Dirigido por Modelos 2014</p>
+	</div>
+</footer>
+{% endblock content %}
