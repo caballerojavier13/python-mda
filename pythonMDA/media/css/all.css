@@ -79,3 +79,13 @@ footer{
     border-bottom: 0;
    }
 }
+
+.center{
+  position: relative !important;
+  margin: 0 auto !important;
+}
+
+.dropdown-menu li{
+  cursor: pointer;
+}
+
