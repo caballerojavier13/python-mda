@@ -7,5 +7,5 @@ $(function(){
 			$(".container").show();
 			$("header").show();
 			$("footer").show();
-		}, 10000);
+		}, 5000);
 });

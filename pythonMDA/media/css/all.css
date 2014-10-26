@@ -89,3 +89,10 @@ footer{
   cursor: pointer;
 }
 
+.alert{
+  display: none;
+}
+
+.pagination a{
+  cursor: pointer;
+}
